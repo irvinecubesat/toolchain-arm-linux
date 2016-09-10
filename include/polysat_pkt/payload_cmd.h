@@ -1,0 +1,7 @@
+#ifndef PAYLOAD_CMD_H
+#define PAYLOAD_CMD_H
+
+#define PAYLOAD_BEACON_DATA 6
+#define PAYLOAD_BEACON_DATA_RESP 7
+
+#endif

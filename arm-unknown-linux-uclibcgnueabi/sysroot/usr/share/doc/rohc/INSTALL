@@ -1,0 +1,87 @@
+Requirements
+------------
+
+The library itself does not require external resources. Optional configure
+flags require external resources:
+
+ --enable-doc                  requires doxygen and latex.
+ --enable-rohc-stats           requires libpcap, gnuplot, grep, sed, awk, sort,
+                               and tr.
+ --enable-rohc-tests           requires libpcap, and sed.
+ --enable-rohc-tests-valgrind  requires --enable-rohc-tests to be selected,
+                               valgrind, xsltproc, and grep.
+
+
+Libraries and tools
+-------------------
+
+Configure the libraries and tools:
+
+ $ ./configure --prefix=/path/to/installation/directory
+
+ Note:
+  - Use ./autogen.sh instead of ./configure if you are building from the source
+    repository.
+  - Add option --enable-examples if you want ot build the examples located in
+    the examples/ directory.
+
+Build the libraries and tools:
+
+ $ make all
+
+Install the libraries and tools:
+
+ $ make install
+
+The libraries are now located in the /path/to/installation/directory/lib
+directory, the header files in the /path/to/installation/directory/include
+directory and the tools in the /path/to/installation/directory/bin directory.
+
+In case of problem:
+ - check you got the last release of the library (see README),
+ - contact the mailing list (see README),
+ - check the bugtracker for known bugs (see README).
+
+
+Documentation
+-------------
+
+HTML documentation can be generated from the source code thanks to Doxygen:
+
+ $ ./configure --enable-doc
+ $ make html
+
+Open the ./doc/html/index.html file in your favorite web browser.
+
+
+Tests
+-----
+
+The functional, robustness and non-regression tests may be run:
+
+ $ ./configure --enable-rohc-tests
+ $ make check
+
+Add option --enable-rohc-tests-valgrind if you want to run tests within
+valgrind.
+
+
+Statistic tool
+--------------
+
+A HTML summary of compression statistics may be generated:
+
+ $ ./configure --enable-rohc-stats
+ $ make -C statistics check
+
+Open the ./statistics/html/index.html file in your favorite web browser.
+
+
+Developers
+-----------
+
+Developers may be interested in additional configure options:
+  --enable-fail-on-warning  causes the build to fail if a warning is emitted
+                            by the compiler (-Werror)
+  --enable-fortify_sources  enables some protections (-D_FORTIFY_SOURCE=2)
+

@@ -1,0 +1,11 @@
+prefix=/home/mcli/projects/buildroot/output/host/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: blkid
+Description: Block device id library
+Version: 1.42.2
+Requires.private: uuid
+Cflags: -I${includedir}/blkid
+Libs: -L${libdir} -lblkid

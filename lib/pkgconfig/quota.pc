@@ -1,0 +1,11 @@
+prefix=/home/mcli/projects/buildroot/output/host/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: quota
+Description: Quota management library
+Version: 1.42.2
+Requires:
+Cflags: -I${includedir}/quota
+Libs: -L${libdir} -lquota

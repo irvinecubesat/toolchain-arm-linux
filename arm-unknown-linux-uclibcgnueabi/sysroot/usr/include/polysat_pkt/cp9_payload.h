@@ -1,0 +1,25 @@
+#ifndef CP9_PAYLOAD_H
+#define CP9_PAYLOAD_H
+
+// These two are defined for all payload processes and can't change
+// 6
+#define CP9_PAYLOAD_BEACON_DATA PAYLOAD_BEACON_DATA
+// 7
+#define CP9_PAYLOAD_BEACON_DATA_RESP PAYLOAD_BEACON_DATA_RESP
+
+#define CP9_TURN_ON 2
+#define CP9_TURN_ON_RESP (CP9_TURN_ON | 0x80)
+#define CP9_TURN_OFF 3
+#define CP9_TURN_OFF_RESP (CP9_TURN_OFF | 0x80)
+#define CP9_REQUEST_DATA 4
+#define CP9_REQUEST_DATA_RESP (CP9_REQUEST_DATA | 0x80)
+#define CP9_ABORT_TEST 5
+#define CP9_ABORT_TEST_RESP (CP9_ABORT_TEST | 0x80)
+// 6 reserved
+// 7 reserved
+#define CP9_CANCEL_ABORT 8
+#define CP9_CANCEL_ABORT_RESP (CP9_CANCEL_ABORT | 0x80)
+#define CP9_TURN_OFF_STANGSAT 9
+#define CP9_TURN_OFF_STANGSAT_RESP (CP9_TURN_OFF_STANGSAT | 0x80)
+
+#endif
