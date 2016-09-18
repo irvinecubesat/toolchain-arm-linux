@@ -30,12 +30,12 @@ fatal ()
 }
 
 # strip /bin/fakeroot to find install prefix
-FAKEROOT_PREFIX=/home/mcli/projects/buildroot/output/host/usr
-FAKEROOT_BINDIR=/home/mcli/projects/buildroot/output/host/usr/bin
+FAKEROOT_PREFIX=/opt/toolchain/toolchain-arm-linux/
+FAKEROOT_BINDIR=/opt/toolchain/toolchain-arm-linux/bin
 
 USEABSLIBPATH=0
 LIB=libfakeroot.so
-PATHS=/home/mcli/projects/buildroot/output/host/usr/lib:${FAKEROOT_PREFIX}/lib64/libfakeroot:${FAKEROOT_PREFIX}/lib32/libfakeroot
+PATHS=/opt/toolchain/toolchain-arm-linux/lib:${FAKEROOT_PREFIX}/lib64/libfakeroot:${FAKEROOT_PREFIX}/lib32/libfakeroot
 FAKED=${FAKEROOT_BINDIR}/faked
 
 FAKED_MODE="unknown-is-root"
